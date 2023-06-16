@@ -106,7 +106,7 @@ void fiboME(int n){
     y0[1][0] = 1;
 
     // Matrix Multiplication
-    vector<vector<int>> powerMat = power(T, n-1);
+    vector<vector<int>> powerMat = power(T, n);
     vector<vector<int>> res =  multiply(powerMat, y0);
 
     // Printing the result
@@ -123,7 +123,7 @@ int main(){
 
     cout<<"Fibonacci sequence using Recursion: "<<endl;
     for(int i=0; i<=n; i++){
-        cout<<fiboRecursion(i)<<" ";
+       cout<<fiboRecursion(i)<<" ";
     }
     cout<<endl;
 
@@ -139,7 +139,7 @@ int main(){
     cout<<endl;
 
     cout<<"Fibonacci sequence using Matrix Exponentiation: ";
-    fiboME(n);
+    fiboME(n-1);
     cout<<endl;
       
     return 0;
